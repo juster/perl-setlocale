@@ -28,6 +28,6 @@ assert(q{(sprintf '%.2f', 5.20) eq '5,20'});
 # convert a floating-point to a string, like the previous test.
 assert(q{require 5.20.0});
 
-# Perl converts this to 5.200.0 which should fail, but not error out.
+# Perl converts this to 5.20.0, which should pass.
 assert(q{require 5.020});
 
