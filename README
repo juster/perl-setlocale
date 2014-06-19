@@ -1,5 +1,7 @@
 THIS IS NOT FOR USE IN PRODUCTION DO NOT RUN make install.
 
+DESCRIPTION
+
 This is only for testing purposes to explore a recent bug in perl
 regarding version number parsing, locales, and the Gtk2 module,
 among others. I wrote this so I don't have to install Gtk2 and
@@ -11,9 +13,15 @@ Remember, whichever perl you use to run the Makefile.PL will be
 the one that this module is compiled with. I patched perl and
 installed it under $HOME/opt in my situation.
 
+Test.pl is hard-coded for the version of perl I am testing (5.20.0)
+as well as the comma using locale I am testing (fr_FR). You may
+need to change these for your situation.
+
 perl Makefile.PL
 make
 perl test.pl
+
+TESTING
 
 I wrote my own simple test script (without Test::More) because for
 the most part Test::More is overkill. I don't need a test harness
