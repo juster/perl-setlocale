@@ -31,3 +31,6 @@ assert(q{require 5.20.0});
 # Perl converts this to 5.20.0, which should pass.
 assert(q{require 5.020});
 
+# Make sure we did not clobber the existing locale, fr_FR.
+assert(q{(sprintf '%.2f', 5.20) eq '5,20'});
+

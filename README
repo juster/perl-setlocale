@@ -28,7 +28,8 @@ the most part Test::More is overkill. I don't need a test harness
 here.
 
 On a patched perl everything passes. On an unpatched perl everything
-but the last test should pass. The last test should emit an error.
+but the "require 5.020" test should pass. The second to last test will
+error out and the very last test won't be run.
 
 Justin "juster" Davis <jrcd83@gmail.com>
 
